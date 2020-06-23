@@ -1,36 +1,22 @@
-// Arreglos y .map
+// Spread opertor...
 
-const carrito = ['Produco 1', 'Produco 2', 'Produco 3'];
+let lenguajes = ['Javascript', 'PHP', 'Python'];
+let frameworks = ['React.js', 'Vue.js', 'Djando'];
 
-console.log(carrito); // Array(3) [ "Produco 1", "Produco 2", "Produco 3" ]
+// Unir los arreglos en 1 solo
 
-const appContenedor = document.querySelector('#app');
-appContenedor.innerHTML = carrito;
+// Vieja
+let combinacion = lenguajes.concat(frameworks);
+console.log(combinacion);
 
-let html = '';
+// Nueva spread operator
+let nuevoArreglo = [...lenguajes, ...frameworks];
+console.log(nuevoArreglo);
 
-carrito.forEach(producto => {
-    html+= `<li>${producto}</li>`;
-})
-appContenedor.innerHTML = html;
-
-// MAP
-carrito.map(producto => {
-    return 'Elproducto es' + producto;
-})
-// Output:
-// 0: "Elproducto esProduco 1"
-// 1: "Elproducto esProduco 2"
-// 2: "Elproducto esProduco 3"
-// length: 3
-
-
-// Object keys
-const persona = {
-    nombre: 'Juan',
-    profesion: 'Web Dev',
-    edad: 22
+function suma(a, b, c) {
+    console.log(a+b+c);
 }
 
-console.log(persona); // Object { nombre: "Juan", profesion: "Web Dev", edad: 22 }
-console.log(Object.keys(persona)); //Array(3) [ "nombre", "profesion", "edad" ]
+const numeros = [10, 10, 10];
+
+suma(...numeros);
