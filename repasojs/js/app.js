@@ -1,19 +1,15 @@
+// Parámetros por default en las funciones
 
-// Funciones
-
-
-// Function declaration
-function saludar(nombre) {
-    console.log(`Bienvenido ${nombre}`);
+// Declaration
+function actividad(nombre ='John Smith', actividad = 'Enseña química') {
+    console.log(`La persona ${nombre}, está realizando la actividad ${actividad}`);
 }
 
-saludar('Yorch');
-
-// Function expression
-const cliente = function(nombre) {
-    console.log(`Mostrando datos del cliente ${nombre}`);
+// Expression
+const actividad = function (nombre ='John Smith', actividad = 'Enseña química') {
+    console.log(`La persona ${nombre}, está realizando la actividad ${actividad}`);
 }
 
-cliente('Juan');
-
-// La principal diferencia entre ambas es en el llamado a la función
+actividad('Juan', 'Aprender Javascript');
+actividad('Pedro', 'Creando un sitio web');
+actividad('David');
