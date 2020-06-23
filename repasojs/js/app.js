@@ -1,29 +1,19 @@
-// Template Strings 
 
-const nombre = 'Jair';
-const trabajo = 'Desarrollador Web';
+// Funciones
 
-// Concatenar en Javascript
-console.log('Nombre: ' + nombre + ', Trabajo: ' + trabajo); // Nombre: Jair, Trabajo: Desarrollador Web
 
-// Nueva versión
-console.log(`Nombre: ${nombre}, Trabajo: ${trabajo}`); // Nombre: Jair, Trabajo: Desarrollador Web
+// Function declaration
+function saludar(nombre) {
+    console.log(`Bienvenido ${nombre}`);
+}
 
-// Concatenar con multiples líneas
-// const contenedorApp = document.querySelector('#app');
-// let html = '<ul>' +
-// '<li> Nombre: ' + nombre + '</li>' +
-// '<li> Trabajo: ' + trabajo + '</li>' +
-//            '<ul>';
-// contenedorApp.innerHTML = html;
+saludar('Yorch');
 
-// Nueva forma: template strings
-const contenedorApp = document.querySelector('#app');
-let html = `
-    <ul>
-        <li> Nombre; ${nombre} </li>
-        <li> Trabajo: ${trabajo} </li>
-    <ul>
-`;
+// Function expression
+const cliente = function(nombre) {
+    console.log(`Mostrando datos del cliente ${nombre}`);
+}
 
-contenedorApp.innerHTML = html;
+cliente('Juan');
+
+// La principal diferencia entre ambas es en el llamado a la función
