@@ -10,9 +10,36 @@
 
 // Variables con LET
 
-let aprendiendo = 'Javascript';
+// let aprendiendo = 'Javascript';
 
-aprendiendo = true;
+// aprendiendo = true;
 
+// Scope con VAR
+// var musica = 'Rock';
 
-console.log(aprendiendo);
+// if (musica) {
+//     var musica = 'Pop';
+//     console.log('Dentro del if:', musica); // Pop
+// }
+
+// console.log('Fuera del if:', musica); // Pop
+
+// Scope con LET
+// let musica = 'Rock';
+
+// if (musica) {
+//     let musica = 'Pop';
+//     console.log('Dentro del if:', musica); // Pop
+// }
+
+// console.log('Fuera del if:', musica); // Rock
+
+// Scope con CONST
+const musica = 'Rock';
+
+if (musica) {
+    const musica = 'Pop';
+    console.log('Dentro del if:', musica); // Pop
+}
+
+console.log('Fuera del if:', musica); // Rock
