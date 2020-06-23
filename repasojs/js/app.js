@@ -1,15 +1,31 @@
-// Parámetros por default en las funciones
+// Arrow functions
 
-// Declaration
-// function actividad(nombre ='John Smith', actividad = 'Enseña química') {
-//     console.log(`La persona ${nombre}, está realizando la actividad ${actividad}`);
-// }
-
-// Expression
-const actividad = function (nombre ='John Smith', actividad = 'Enseña química') {
-    console.log(`La persona ${nombre}, está realizando la actividad ${actividad}`);
+// Function expression
+let viajando = function(destino) {
+    return `Viajando a la ciudad de: ${destino}`;
 }
 
-actividad('Juan', 'Aprender Javascript');
-actividad('Pedro', 'Creando un sitio web');
-actividad('David');
+// Arrow function
+let viajando = (destino) => { 
+    return `Viajando a la ciudad de: ${destino}`;
+}
+
+// Si solo es 1 parámetro se eliminan los '( )'
+let viajando = destino => { 
+    return `Viajando a la ciudad de: ${destino}`;
+}
+
+// Si solo retornas un valor puedes eliminar
+// las '{ ... }' 'return'
+let viajando = destino =>  `Viajando a la ciudad de: ${destino}`;
+
+// 1
+let viaje = viajando('Paris');
+// 2
+let viaje2; 
+viaje2 = viajando('Londes');
+
+console.log(viaje + '\n' + viaje2);
+
+
+
