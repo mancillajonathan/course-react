@@ -1,45 +1,29 @@
-// Crear variables con VAR
+// Template Strings 
 
-// var aprendiendo = true;
+const nombre = 'Jair';
+const trabajo = 'Desarrollador Web';
 
-// aprendiendo = false;
+// Concatenar en Javascript
+console.log('Nombre: ' + nombre + ', Trabajo: ' + trabajo); // Nombre: Jair, Trabajo: Desarrollador Web
 
-// Variables con CONST
+// Nueva versión
+console.log(`Nombre: ${nombre}, Trabajo: ${trabajo}`); // Nombre: Jair, Trabajo: Desarrollador Web
 
-// const aprendiendo = 'Javascript';
+// Concatenar con multiples líneas
+// const contenedorApp = document.querySelector('#app');
+// let html = '<ul>' +
+// '<li> Nombre: ' + nombre + '</li>' +
+// '<li> Trabajo: ' + trabajo + '</li>' +
+//            '<ul>';
+// contenedorApp.innerHTML = html;
 
-// Variables con LET
+// Nueva forma: template strings
+const contenedorApp = document.querySelector('#app');
+let html = `
+    <ul>
+        <li> Nombre; ${nombre} </li>
+        <li> Trabajo: ${trabajo} </li>
+    <ul>
+`;
 
-// let aprendiendo = 'Javascript';
-
-// aprendiendo = true;
-
-// Scope con VAR
-// var musica = 'Rock';
-
-// if (musica) {
-//     var musica = 'Pop';
-//     console.log('Dentro del if:', musica); // Pop
-// }
-
-// console.log('Fuera del if:', musica); // Pop
-
-// Scope con LET
-// let musica = 'Rock';
-
-// if (musica) {
-//     let musica = 'Pop';
-//     console.log('Dentro del if:', musica); // Pop
-// }
-
-// console.log('Fuera del if:', musica); // Rock
-
-// Scope con CONST
-const musica = 'Rock';
-
-if (musica) {
-    const musica = 'Pop';
-    console.log('Dentro del if:', musica); // Pop
-}
-
-console.log('Fuera del if:', musica); // Rock
+contenedorApp.innerHTML = html;
