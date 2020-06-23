@@ -7,21 +7,14 @@ const persona = {
     edad: 22,
     isAdult: true
 }
-console.log(persona);
 
-// Acceder a los valores individualmente
-console.log(persona.nombre);
-console.log(persona.edad);
+// Object constructor
+function Tarea(nombre, urgencia) {
+    this.nombre = nombre;
+    this.urgencia = urgencia;
+}
 
-// Segunda opción
-console.log(persona['edad']);
-
-// -------------------------------------
-
-// Constante persona
-let nombrePersona = 'Juan';
-let nombreProfesion = 'Desarrollador web';
-
-console.log(nombrePersona);
-console.log(nombreProfesion);
-
+// Crear una nueva tarea
+const tarea1 = new Tarea('Aprender Javascript y React', 'Urgente');
+console.log(tarea1);
+console.log(tarea1.nombre);
