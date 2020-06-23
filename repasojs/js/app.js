@@ -1,31 +1,27 @@
-// Arrow functions
+// Objetos
 
-// Function expression
-let viajando = function(destino) {
-    return `Viajando a la ciudad de: ${destino}`;
+// Object literal
+const persona = {
+    nombre: 'Juan',
+    profesion: 'Web Dev',
+    edad: 22,
+    isAdult: true
 }
+console.log(persona);
 
-// Arrow function
-let viajando = (destino) => { 
-    return `Viajando a la ciudad de: ${destino}`;
-}
+// Acceder a los valores individualmente
+console.log(persona.nombre);
+console.log(persona.edad);
 
-// Si solo es 1 parámetro se eliminan los '( )'
-let viajando = destino => { 
-    return `Viajando a la ciudad de: ${destino}`;
-}
+// Segunda opción
+console.log(persona['edad']);
 
-// Si solo retornas un valor puedes eliminar
-// las '{ ... }' 'return'
-let viajando = destino =>  `Viajando a la ciudad de: ${destino}`;
+// -------------------------------------
 
-// 1
-let viaje = viajando('Paris');
-// 2
-let viaje2; 
-viaje2 = viajando('Londes');
+// Constante persona
+let nombrePersona = 'Juan';
+let nombreProfesion = 'Desarrollador web';
 
-console.log(viaje + '\n' + viaje2);
-
-
+console.log(nombrePersona);
+console.log(nombreProfesion);
 
