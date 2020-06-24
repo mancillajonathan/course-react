@@ -1,12 +1,14 @@
-// Exportar módulos
+// Exportar funciones en módulos
+export const nombreTarea = 'Aprender API REST';
 
-// Primera forma
-export const nombreTarea = 'Aprender Adobe XD';
-// Segunda forma
-const prioridadTarea = 'Inmediata';
-export default prioridadTarea;
+export const crearTarea = (tarea, urgencia) => {
+    return `La tarea ${tarea} tiene una urgencia ${urgencia}`;
+}
 
-// Solo puedes tener un export default por documento
+export const tareaCompletada = () => {
+    console.log('La tarea se completó');
+}
+
 
 class Tarea {
     constructor(nombre, prioridad) {
