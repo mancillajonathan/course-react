@@ -1,6 +1,9 @@
-// Módulos en ES6+
-import prioridadTarea, {nombreTarea} from './tareas.js';
-import prioridadTrea from './tareas.js';
+// Exportando funciones en módulos
+import {nombreTarea, crearTarea, tareaCompletada} from './tareas.js';
 
 console.log(nombreTarea);
-console.log(prioridadTarea);
+
+const tarea1 = crearTarea('Torres Project', 'Altísima');
+console.log(tarea1);
+
+tareaCompletada();
