@@ -1,12 +1,21 @@
-import React from 'react';  // Primer paso siempre  importar la librerí de React
+import React from 'react';  
 
-function Header() { // Clear una function declaration
+function Header() {
 
-    // En esta parte se puede escribir javascript standard
+    // const edad = 25;
 
-    return( // To lo que este en el return aparecerá en pantalla
-        <h1>My first component MDF</h1> // Elemento html
+    // let mensaje;
+
+    // if(edad >= 18) {
+    //     mensaje = 'Eres mayor de edad'
+    // } else {
+    //     mensaje = 'eres menor de edad'
+    // }
+
+    return( 
+        // edad > 20 ? {mensaje} = 'Saca tu tarjeta de debido' : {mensaje} = 'Sigue participando'
+        <h1 className="encabezado">Tienda virtual</h1>
     )
 }
 
-export default Header; // Siempre exportar la función
+export default Header; 
