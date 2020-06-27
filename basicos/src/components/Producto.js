@@ -6,8 +6,11 @@ const Producto = ({producto, carrito, agregarProducto, productos}) => {
 
     // Agregar una producto al carrito
     const seleccionarProducto = id => {
-        const producto = productos.filter(producto => producto.id === id);
-        console.log(producto[0]);
+        const producto = productos.filter(producto => producto.id === id)[0];
+        agregarProducto([
+            ...carrito, // spread operator
+            producto
+        ]);
     }
 
     return (
