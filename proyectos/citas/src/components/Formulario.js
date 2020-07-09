@@ -114,7 +114,7 @@ const Formulario = ({ crearCita }) => {
           onChange={handleChange}
         ></textarea>
         <button type='submit' className='u-full-width button-primary'>
-          Agregar citas
+          Agregar cita
         </button>
       </form>
     </Fragment>
