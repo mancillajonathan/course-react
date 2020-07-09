@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 
 const Formulario = () => {
-  // Creat state de citas
+  // Create state de citas
   const [cita, setActualizarCita] = useState({
     mascota: '',
     propietario: '',
@@ -22,11 +22,24 @@ const Formulario = () => {
   // Extraer los valores
   const { mascota, propietario, fecha, hora, sintomas } = cita;
 
+  // Función cuando el usuario presiona agregar una cita
+  const submitCita = (event) => {
+    event.preventDefault();
+    
+    // Validar
+
+    // Asignar un ID
+
+    // Crear la cita
+
+    // Reiniciar el form
+  };
+
   return (
     <Fragment>
       <h2>Crear cita</h2>
 
-      <form action=''>
+      <form onSubmit={submitCita}>
         <label htmlFor=''>Nombre mascota</label>
         <input
           type='text'
@@ -64,17 +77,17 @@ const Formulario = () => {
           value={hora}
           onChange={handleChange}
         />
+        <label htmlFor=''>Síntomas</label>
+        <textarea
+          className='u-full-width'
+          name='sintomas'
+          value={sintomas}
+          onChange={handleChange}
+        ></textarea>
+        <button type='submit' className='u-full-width button-primary'>
+          Agregar citas
+        </button>
       </form>
-      <label htmlFor=''>Síntomas</label>
-      <textarea
-        className='u-full-width'
-        name='sinstomas'
-        value={sintomas}
-        onChange={handleChange}
-      ></textarea>
-      <button type='submit' className='u-full-width button-primary  '>
-        Agregar cita
-      </button>
     </Fragment>
   );
 };
