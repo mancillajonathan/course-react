@@ -10,6 +10,9 @@ const Formulario = () => {
     sintomas: '',
   });
 
+  // Segundo state
+  const [error, setError] = useState(false);
+
   // Función que se ejecuta cada que el usuario escribe en un input
   const handleChange = (event) => {
     setActualizarCita({
@@ -25,8 +28,19 @@ const Formulario = () => {
   // Función cuando el usuario presiona agregar una cita
   const submitCita = (event) => {
     event.preventDefault();
-    
+
     // Validar
+    if (
+      mascota.trim() === '' ||
+      propietario.trim() === '' ||
+      fecha.trim() === '' ||
+      mascota.trim() === '' ||
+      hora.trim() === '' ||
+      sintomas.trim() === ''
+    ) {     
+      setError(true) 
+      return;
+    } 
 
     // Asignar un ID
 
@@ -37,6 +51,7 @@ const Formulario = () => {
 
   return (
     <Fragment>
+      {error ? <p className="alerta-error">Todos los campos son obligatorios</p> : null}
       <h2>Crear cita</h2>
 
       <form onSubmit={submitCita}>
