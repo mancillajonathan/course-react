@@ -20,8 +20,22 @@ const Button = styled.button`
 `;
 
 function App() {
-  const consultarAPI = () => {
-    console.log('Consultando...');
+  // promises
+  // const consultarAPI = () => {
+  //   const api = fetch(
+  //     'http://breaking-bad-quotes.herokuapp.com/v1/quotes'
+  //   );
+  //   const frase = api.then((respuesta) => respuesta.json());
+  //   frase.then(resultado => console.log(resultado));
+  // };
+
+  //Async/await
+  const consultarAPI = async () => {
+    const api = await fetch(
+      'http://breaking-bad-quotes.herokuapp.com/v1/quotes'
+    );
+    const frase = await api.json();
+    console.log(frase[0]);
   };
 
   return (
