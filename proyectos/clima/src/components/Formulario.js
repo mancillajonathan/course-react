@@ -7,6 +7,9 @@ const Formulario = () => {
     pais: '',
   });
 
+  // Error
+  const [error, setError] = useState(false);
+
   // extraer ciudad y pais
   const { ciudad, pais } = busqueda;
 
@@ -19,9 +22,27 @@ const Formulario = () => {
     });
   };
 
+  // Cuando el usuario da submit al form
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Validar
+    if (ciudad.trim() === '' || pais.trim() === '') {
+      setError(true);
+      return;
+    }
+
+    setError(false);
+
+    // Pasarlo al componente principal
+  };
+
   return (
     <div>
-      <form action=''>
+      <form onSubmit={handleSubmit}>
+        {error ? (
+          <p className='red darken-4 error'>Todos los campos son obligatorios</p>
+        ) : null}
         <div className='input-field col s12'>
           <input
             type='text'
@@ -50,6 +71,14 @@ const Formulario = () => {
             <option value='PE'>Perú</option>
           </select>
           <label htmlFor='pais'>País: </label>
+        </div>
+
+        <div className='input-field col s12'>
+          <input
+            type='submit'
+            value='Buscar clima'
+            className='waves-effect waves-light btn-large btn-block yellow accent-4'
+          />
         </div>
       </form>
     </div>
